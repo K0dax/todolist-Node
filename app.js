@@ -6,6 +6,7 @@ const app = express();
 let items = ["Tomar café", "Aulas de node"];
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
